@@ -1,0 +1,23 @@
+{
+  "name": "g-nie-logiciel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidoubari1/G-nie-logiciel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidoubari1/G-nie-logiciel/issues"
+  },
+  "homepage": "https://github.com/saidoubari1/G-nie-logiciel#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
