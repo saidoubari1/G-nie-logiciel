@@ -22,5 +22,14 @@ export const accountDAO = {
         console.log("base de donnée modifiée: ", ACCOUNT_LIST);
     }
   },
-  retrieveAccount(id) {},
+  retrieveAccount(id) {
+    const account = ACCOUNT_LIST.find(acc => acc.id === id);
+
+    if(!account) return null;
+
+    return {
+      id: account.id,
+      name: `${account.firstName} ${account.lastName}`, // concaténation du nom et du prénom
+    };
+  },
 };
