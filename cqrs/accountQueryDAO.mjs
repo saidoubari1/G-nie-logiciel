@@ -1,4 +1,5 @@
 import { accountSummaryList } from "./queryDatabase.mjs";
+import { accountCache } from "./cache.mjs";
 
 export const accountQueryDAO = {
   retrieveAccountList() {
@@ -6,6 +7,6 @@ export const accountQueryDAO = {
   },
 
   retrieveAccount(id) {
-    return accountSummaryList.find(acc => acc.id === id) || null;
+    return accountCache[id] || null;
   },
 };
