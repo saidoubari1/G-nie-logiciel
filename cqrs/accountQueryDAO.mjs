@@ -1,11 +1,13 @@
-import { ACCOUNT_LIST } from "./database.mjs";
+import { accountSummaryList } from "./queryDatabase.mjs";
+import { accountCache } from "./cache.mjs";
 
 export const accountQueryDAO = {
   retrieveAccountList() {
-    return ACCOUNT_LIST;
+    return accountSummaryList;
   },
 
+  // Retourner depuis le cache au lieu de accountSummaryList
   retrieveAccount(id) {
-    return ACCOUNT_LIST.find(acc => acc.id === id) || null;
+    return accountCache[id] || null;
   },
 };
