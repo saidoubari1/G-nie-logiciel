@@ -14,10 +14,10 @@ console.log('=== 2. Liste des comptes (queryDatabase) ===');
 console.log(accountQuery.getAccountList());
 console.log('→ Pas de creationDate\n');
 
-// Récupérer un compte (depuis cache)
-console.log('=== 3. Récupération d\'un compte (cache) ===');
+// Récupérer un compte
+console.log('=== 3. Récupération d\'un compte ===');
 console.log(accountQuery.getAccount(accountId));
-console.log('→ Avec propriété "name"\n');
+console.log();
 
 // Modifier le compte
 console.log('=== 4. Modification du compte ===');
@@ -27,4 +27,4 @@ console.log();
 // Vérifier les modifications
 console.log('=== 5. Vérification des modifications ===');
 console.log('Liste:', accountQuery.getAccountList());
-console.log('Cache:', accountQuery.getAccount(accountId));
+console.log('Compte:', accountQuery.getAccount(accountId));

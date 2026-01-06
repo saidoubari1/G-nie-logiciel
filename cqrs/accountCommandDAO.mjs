@@ -1,6 +1,5 @@
 import { ACCOUNT_LIST } from "./database.mjs";
 import { accountSummaryList } from "./queryDatabase.mjs";
-import { accountCache } from "./cache.mjs";
 
 export const accountCommandDAO = {
   insertAccount(account) {
@@ -15,14 +14,6 @@ export const accountCommandDAO = {
       firstName: account.firstName
     });
     console.log('Base de données (query) après insertion:', accountSummaryList);
-
-    // Ajout dans le cache avec la propriété name
-    accountCache[account.id] = {
-      id: account.id,
-      name: `${account.firstName} ${account.lastName}`,
-      creationDate: account.creationDate
-    };
-    console.log('Cache après insertion:', accountCache);
   },
 
   retrieveAccountById(id) {
@@ -47,13 +38,5 @@ export const accountCommandDAO = {
       };
       console.log('Base de données (query) après modification:', accountSummaryList);
     }
-
-    // Mise à jour du cache avec la propriété name
-    accountCache[account.id] = {
-      id: account.id,
-      name: `${account.firstName} ${account.lastName}`,
-      creationDate: account.creationDate
-    };
-    console.log('Cache après modification:', accountCache);
   },
 };
